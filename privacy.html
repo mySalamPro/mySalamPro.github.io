@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="page.title">SalamPro Passbox - Privacy Policy</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/6.6.6/css/flag-icons.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#512BD4',
+                        secondary: '#2D3748',
+                        accent: '#00D8FF'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800 bg-gray-50 antialiased">
+
+    <nav class="fixed w-full z-50 transition-all duration-300 bg-white/90 backdrop-blur-md shadow-sm" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex-shrink-0 flex items-center gap-2 cursor-pointer" onclick="window.location.href='index.html'">
+                    <img src="./images/logo.png" alt="SalamPro Passbox Logo" class="w-10 h-10 rounded-xl shadow-lg" loading="lazy">
+                    <span class="font-bold text-xl tracking-tight text-gray-900">SalamPro <span class="text-primary">Passbox</span></span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html#features" class="text-gray-600 hover:text-primary transition-colors" data-i18n="nav.features">Features</a>
+                    <a href="index.html#security" class="text-gray-600 hover:text-primary transition-colors" data-i18n="nav.security">Security</a>
+                    <a href="index.html#tech" class="text-gray-600 hover:text-primary transition-colors" data-i18n="nav.tech">Tech Stack</a>
+                    <a href="#" class="text-gray-900 font-semibold" data-i18n="nav.privacy">Privacy Policy</a>
+                    <a href="https://github.com/SalamProPassBox/Passbox2/releases" target="_blank" class="text-gray-600 hover:text-primary transition-colors" data-i18n="nav.download">Download</a>
+
+                    <div class="relative ml-4">
+                        <button id="desktop-lang-btn" class="flex items-center text-gray-600 hover:text-primary focus:outline-none gap-2">
+                            <span class="fi fi-us text-xl"></span>
+                        </button>
+                        <div id="desktop-lang-menu" class="absolute right-0 mt-2 w-48 bg-white rounded-xl shadow-xl border border-gray-100 overflow-hidden hidden dropdown-menu z-50">
+                            <button onclick="changeLanguage('zh-CN')" class="w-full flex items-center px-4 py-3 text-sm text-gray-700 hover:bg-purple-50 hover:text-primary transition-colors text-left">
+                                <span class="fi fi-cn text-xl mr-3"></span> 中文 (简体)
+                            </button>
+                            <button onclick="changeLanguage('en')" class="w-full flex items-center px-4 py-3 text-sm text-gray-700 hover:bg-purple-50 hover:text-primary transition-colors text-left">
+                                <span class="fi fi-us text-xl mr-3"></span> English
+                            </button>
+                            <button onclick="changeLanguage('ms')" class="w-full flex items-center px-4 py-3 text-sm text-gray-700 hover:bg-purple-50 hover:text-primary transition-colors text-left">
+                                <span class="fi fi-my text-xl mr-3"></span> Bahasa Melayu
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="md:hidden flex items-center gap-4">
+                    <div class="relative">
+                        <button id="mobile-lang-btn" class="text-gray-600 hover:text-primary focus:outline-none flex items-center">
+                            <span class="fi fi-us text-xl"></span>
+                        </button>
+                        <div id="mobile-lang-menu" class="absolute right-0 mt-2 w-48 bg-white rounded-xl shadow-xl border border-gray-100 overflow-hidden hidden z-50">
+                            <button onclick="changeLanguage('zh-CN')" class="w-full flex items-center px-4 py-3 text-sm text-gray-700 hover:bg-purple-50 hover:text-primary transition-colors text-left">
+                                <span class="fi fi-cn text-xl mr-3"></span> 中文
+                            </button>
+                            <button onclick="changeLanguage('en')" class="w-full flex items-center px-4 py-3 text-sm text-gray-700 hover:bg-purple-50 hover:text-primary transition-colors text-left">
+                                <span class="fi fi-us text-xl mr-3"></span> English
+                            </button>
+                            <button onclick="changeLanguage('ms')" class="w-full flex items-center px-4 py-3 text-sm text-gray-700 hover:bg-purple-50 hover:text-primary transition-colors text-left">
+                                <span class="fi fi-my text-xl mr-3"></span> Melayu
+                            </button>
+                        </div>
+                    </div>
+
+                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-gray-900 focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 absolute w-full shadow-lg">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="index.html#features" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50" data-i18n="nav.features">Features</a>
+                <a href="index.html#security" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50" data-i18n="nav.security">Security</a>
+                <a href="index.html#tech" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50" data-i18n="nav.tech">Tech Stack</a>
+                <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-primary bg-gray-50" data-i18n="nav.privacy">Privacy Policy</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="pt-28 pb-16 px-4 sm:px-6 lg:px-8 bg-gray-50 min-h-screen">
+        <div class="max-w-4xl mx-auto">
+            <div class="mb-8">
+                <p class="text-sm text-primary font-semibold mb-2" data-i18n="PrivacyPolicy">Privacy Policy</p>
+                <h1 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4" data-i18n="PrivacyTitle">User Data Protection Policy</h1>
+                <p class="text-gray-600 text-sm" data-i18n="PrivacyLastUpdated">Last updated: July 20, 2025</p>
+            </div>
+
+            <div class="space-y-8 bg-white rounded-3xl shadow-sm border border-gray-100 p-6 md:p-8">
+                <section class="space-y-3">
+                    <h2 class="text-xl font-semibold text-gray-900" data-i18n="PrivacySection1Title">1. Data Collection</h2>
+                    <p class="text-gray-700" data-i18n="PrivacySection1Desc">We only collect user-stored password data and basic account information, including:</p>
+                    <ul class="list-disc pl-5 space-y-2 text-gray-700">
+                        <li data-i18n="PrivacySection1Item1">Account login credentials</li>
+                        <li data-i18n="PrivacySection1Item2">Password records and related notes</li>
+                        <li data-i18n="PrivacySection1Item3">Account categorization information</li>
+                        <li data-i18n="PrivacySection1Item4">Last update time</li>
+                    </ul>
+                </section>
+
+                <section class="space-y-3">
+                    <h2 class="text-xl font-semibold text-gray-900" data-i18n="PrivacySection2Title">2. Data Encryption</h2>
+                    <p class="text-gray-700" data-i18n="PrivacySection2Desc">We employ the following measures to protect your data security:</p>
+                    <ul class="list-disc pl-5 space-y-2 text-gray-700">
+                        <li data-i18n="PrivacySection2Item1">End-to-end encryption technology</li>
+                        <li data-i18n="PrivacySection2Item2">AES-256 Advanced Encryption Standard</li>
+                        <li data-i18n="PrivacySection2Item3">Secure key derivation function</li>
+                        <li data-i18n="PrivacySection2Item4">Local data encryption storage</li>
+                        <li data-i18n="PrivacySection2Item5">On Android, you can enable the "Disable screenshots" option to reduce the risk of data leakage via screen captures. If you turn it off, screenshots and screen recordings that contain your passwords and other sensitive information should be handled with extra care.</li>
+                    </ul>
+                </section>
+
+                <section class="space-y-3">
+                    <h2 class="text-xl font-semibold text-gray-900" data-i18n="PrivacySection3Title">3. Data Access</h2>
+                    <p class="text-gray-700" data-i18n="PrivacySection3Desc">Access to user data is strictly controlled:</p>
+                    <ul class="list-disc pl-5 space-y-2 text-gray-700">
+                        <li data-i18n="PrivacySection3Item1">Only the user can access their data</li>
+                        <li data-i18n="PrivacySection3Item2">All access requires authentication</li>
+                        <li data-i18n="PrivacySection3Item3">Biometric verification support</li>
+                        <li data-i18n="PrivacySection3Item4">All data is stored locally</li>
+                    </ul>
+                </section>
+
+                <section class="space-y-3">
+                    <h2 class="text-xl font-semibold text-gray-900" data-i18n="PrivacySection4Title">4. Third-Party Sharing</h2>
+                    <p class="text-gray-700" data-i18n="PrivacySection4Desc">We commit to:</p>
+                    <ul class="list-disc pl-5 space-y-2 text-gray-700">
+                        <li data-i18n="PrivacySection4Item1">Not selling user data</li>
+                        <li data-i18n="PrivacySection4Item2">Not sharing data with third parties</li>
+                        <li data-i18n="PrivacySection4Item3">Not using data for commercial purposes</li>
+                        <li data-i18n="PrivacySection4Item4">Complying with relevant laws and regulations</li>
+                    </ul>
+                </section>
+
+                <section class="space-y-3">
+                    <h2 class="text-xl font-semibold text-gray-900" data-i18n="PrivacySection5Title">5. User Rights</h2>
+                    <p class="text-gray-700" data-i18n="PrivacySection5Desc">Users have the following rights:</p>
+                    <ul class="list-disc pl-5 space-y-2 text-gray-700">
+                        <li data-i18n="PrivacySection5Item1">View all stored data</li>
+                        <li data-i18n="PrivacySection5Item2">Modify or delete personal data</li>
+                        <li data-i18n="PrivacySection5Item3">Export data copy</li>
+                    </ul>
+                </section>
+
+                <section class="space-y-3">
+                    <h2 class="text-xl font-semibold text-gray-900" data-i18n="PrivacyBackupTipsTitle">Backup &amp; Security Tips</h2>
+                    <ul class="list-disc pl-5 space-y-2 text-gray-700">
+                        <li data-i18n="PrivacyBackupTipsItem1">Set a strong backup passphrase different from your login password, with at least 12 characters including upper/lowercase letters, numbers and symbols.</li>
+                        <li data-i18n="PrivacyBackupTipsItem2">Store .pbbak backup files in trusted locations such as encrypted cloud storage or local encrypted storage, and avoid sending them via chat apps or public drives.</li>
+                        <li data-i18n="PrivacyBackupTipsItem3">Regularly clean up outdated backup files to reduce potential leakage risks.</li>
+                        <li data-i18n="PrivacyBackupTipsItem4">If you suspect any backup file may be exposed, change important account passwords as soon as possible and generate a new backup.</li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-gray-900 text-gray-400 py-12 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                <div class="flex items-center gap-2">
+                    <img src="./images/logo.png" alt="SalamPro Passbox Logo" class="w-8 h-8 rounded-lg" loading="lazy">
+                    <span class="text-white font-bold text-lg">SalamPro Passbox</span>
+                </div>
+                <div class="text-sm">
+                    &copy; 2026 SalamPro Team. All rights reserved.
+                </div>
+                <div class="flex gap-6">
+                    <a href="#" class="hover:text-white transition-colors"><i class="fab fa-twitter text-xl"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const translations = {
+            'zh-CN': {
+                'page.title': 'SalamPro Passbox - 新一代本地密码保险箱',
+                'nav.features': '功能特性',
+                'nav.security': '安全架构',
+                'nav.tech': '技术栈',
+                'nav.privacy': '隐私政策',
+                'nav.download': '下载',
+                'PrivacyPolicy': '隐私政策',
+                'PrivacyTitle': '用户数据保护政策',
+                'PrivacySection1Title': '1. 数据收集',
+                'PrivacySection1Desc': '我们仅收集用户存储的密码数据和基础账号信息，包括：',
+                'PrivacySection1Item1': '账号登录凭证',
+                'PrivacySection1Item2': '密码记录及相关备注',
+                'PrivacySection1Item3': '账号分类信息',
+                'PrivacySection1Item4': '最后更新时间',
+                'PrivacySection2Title': '2. 数据加密',
+                'PrivacySection2Desc': '我们通过以下措施保护您的数据安全：',
+                'PrivacySection2Item1': '端到端加密技术',
+                'PrivacySection2Item2': 'AES-256 高级加密标准',
+                'PrivacySection2Item3': '安全的密钥派生函数',
+                'PrivacySection2Item4': '本地加密存储',
+                'PrivacySection2Item5': '在 Android 设备上，您可以开启“禁用截屏”来降低屏幕截图泄露敏感数据的风险；如果关闭该功能，请谨慎处理包含密码等信息的截图和录屏。',
+                'PrivacySection3Title': '3. 数据访问',
+                'PrivacySection3Desc': '对用户数据的访问受到严格控制：',
+                'PrivacySection3Item1': '只有您本人可以访问自己的数据',
+                'PrivacySection3Item2': '所有访问都需要身份验证',
+                'PrivacySection3Item3': '支持生物识别验证',
+                'PrivacySection3Item4': '所有数据均存储于本地',
+                'PrivacySection4Title': '4. 第三方共享',
+                'PrivacySection4Desc': '我们承诺：',
+                'PrivacySection4Item1': '不出售用户数据',
+                'PrivacySection4Item2': '不与第三方共享数据',
+                'PrivacySection4Item3': '不将数据用于商业用途',
+                'PrivacySection4Item4': '遵守相关法律法规',
+                'PrivacySection5Title': '5. 用户权利',
+                'PrivacySection5Desc': '您享有以下权利：',
+                'PrivacySection5Item1': '查看所有已存储的数据',
+                'PrivacySection5Item2': '修改或删除个人数据',
+                'PrivacySection5Item3': '导出数据副本',
+                'PrivacyLastUpdated': '最近更新：2025 年 7 月 20 日',
+                'PrivacyBackupTipsTitle': '备份与安全提示',
+                'PrivacyBackupTipsItem1': '为备份设置与登录密码不同的强口令，建议长度不少于 12 位并包含大小写字母、数字和符号。',
+                'PrivacyBackupTipsItem2': '将 .pbbak 备份文件保存在受信任的位置，如加密云盘或本地加密存储，不要随意发送到聊天工具或公共网盘。',
+                'PrivacyBackupTipsItem3': '定期清理不再需要的旧备份文件，减少潜在泄露风险。',
+                'PrivacyBackupTipsItem4': '一旦怀疑备份文件可能泄露，请尽快修改重要账户密码并重新生成新的备份。'
+            },
+            'en': {
+                'page.title': 'SalamPro Passbox - Next Gen Local Password Safe',
+                'nav.features': 'Features',
+                'nav.security': 'Security',
+                'nav.tech': 'Tech Stack',
+                'nav.privacy': 'Privacy Policy',
+                'nav.download': 'Download',
+                'PrivacyPolicy': 'Privacy Policy',
+                'PrivacyTitle': 'User Data Protection Policy',
+                'PrivacySection1Title': '1. Data Collection',
+                'PrivacySection1Desc': 'We only collect user-stored password data and basic account information, including:',
+                'PrivacySection1Item1': 'Account login credentials',
+                'PrivacySection1Item2': 'Password records and related notes',
+                'PrivacySection1Item3': 'Account categorization information',
+                'PrivacySection1Item4': 'Last update time',
+                'PrivacySection2Title': '2. Data Encryption',
+                'PrivacySection2Desc': 'We employ the following measures to protect your data security:',
+                'PrivacySection2Item1': 'End-to-end encryption technology',
+                'PrivacySection2Item2': 'AES-256 Advanced Encryption Standard',
+                'PrivacySection2Item3': 'Secure key derivation function',
+                'PrivacySection2Item4': 'Local data encryption storage',
+                'PrivacySection2Item5': 'On Android, you can enable the "Disable screenshots" option to reduce the risk of data leakage via screen captures. If you turn it off, screenshots and screen recordings that contain your passwords and other sensitive information should be handled with extra care.',
+                'PrivacySection3Title': '3. Data Access',
+                'PrivacySection3Desc': 'Access to user data is strictly controlled:',
+                'PrivacySection3Item1': 'Only the user can access their data',
+                'PrivacySection3Item2': 'All access requires authentication',
+                'PrivacySection3Item3': 'Biometric verification support',
+                'PrivacySection3Item4': 'All data is stored locally',
+                'PrivacySection4Title': '4. Third-Party Sharing',
+                'PrivacySection4Desc': 'We commit to:',
+                'PrivacySection4Item1': 'Not selling user data',
+                'PrivacySection4Item2': 'Not sharing data with third parties',
+                'PrivacySection4Item3': 'Not using data for commercial purposes',
+                'PrivacySection4Item4': 'Complying with relevant laws and regulations',
+                'PrivacySection5Title': '5. User Rights',
+                'PrivacySection5Desc': 'Users have the following rights:',
+                'PrivacySection5Item1': 'View all stored data',
+                'PrivacySection5Item2': 'Modify or delete personal data',
+                'PrivacySection5Item3': 'Export data copy',
+                'PrivacyLastUpdated': 'Last updated: July 20, 2025',
+                'PrivacyBackupTipsTitle': 'Backup & Security Tips',
+                'PrivacyBackupTipsItem1': 'Set a strong backup passphrase different from your login password, with at least 12 characters including upper/lowercase letters, numbers and symbols.',
+                'PrivacyBackupTipsItem2': 'Store .pbbak backup files in trusted locations such as encrypted cloud storage or local encrypted storage, and avoid sending them via chat apps or public drives.',
+                'PrivacyBackupTipsItem3': 'Regularly clean up outdated backup files to reduce potential leakage risks.',
+                'PrivacyBackupTipsItem4': 'If you suspect any backup file may be exposed, change important account passwords as soon as possible and generate a new backup.'
+            },
+            'ms': {
+                'page.title': 'SalamPro Passbox - Peti Simpanan Kata Laluan Tempatan Generasi Baharu',
+                'nav.features': 'Ciri-ciri',
+                'nav.security': 'Keselamatan',
+                'nav.tech': 'Teknologi',
+                'nav.privacy': 'Dasar Privasi',
+                'nav.download': 'Muat Turun',
+                'PrivacyPolicy': 'Dasar Privasi',
+                'PrivacyTitle': 'Dasar Perlindungan Data Pengguna',
+                'PrivacySection1Title': '1. Pengumpulan Data',
+                'PrivacySection1Desc': 'Kami hanya mengumpul data kata laluan yang disimpan pengguna dan maklumat akaun asas, termasuk:',
+                'PrivacySection1Item1': 'Kelayakan log masuk akaun',
+                'PrivacySection1Item2': 'Rekod kata laluan dan nota berkaitan',
+                'PrivacySection1Item3': 'Maklumat pengkategorian akaun',
+                'PrivacySection1Item4': 'Masa kemas kini terakhir',
+                'PrivacySection2Title': '2. Penyulitan Data',
+                'PrivacySection2Desc': 'Kami menggunakan langkah berikut untuk melindungi keselamatan data anda:',
+                'PrivacySection2Item1': 'Teknologi penyulitan hujung ke hujung',
+                'PrivacySection2Item2': 'Piawaian Penyulitan Lanjutan AES-256',
+                'PrivacySection2Item3': 'Fungsi derivasi kunci yang selamat',
+                'PrivacySection2Item4': 'Penyimpanan data yang disulitkan secara tempatan',
+                'PrivacySection2Item5': 'Pada Android, anda boleh mengaktifkan pilihan "Lumpuhkan tangkapan skrin" untuk mengurangkan risiko kebocoran data melalui tangkap layar. Jika anda mematikannya, tangkap layar dan rakaman skrin yang mengandungi kata laluan dan maklumat sensitif anda hendaklah dikendalikan dengan lebih berhati-hati.',
+                'PrivacySection3Title': '3. Akses Data',
+                'PrivacySection3Desc': 'Akses kepada data pengguna dikawal dengan ketat:',
+                'PrivacySection3Item1': 'Hanya pengguna boleh mengakses data mereka',
+                'PrivacySection3Item2': 'Semua akses memerlukan pengesahan',
+                'PrivacySection3Item3': 'Sokongan pengesahan biometrik',
+                'PrivacySection3Item4': 'Semua data disimpan secara tempatan',
+                'PrivacySection4Title': '4. Perkongsian Pihak Ketiga',
+                'PrivacySection4Desc': 'Kami komited untuk:',
+                'PrivacySection4Item1': 'Tidak menjual data pengguna',
+                'PrivacySection4Item2': 'Tidak berkongsi data dengan pihak ketiga',
+                'PrivacySection4Item3': 'Tidak menggunakan data untuk tujuan komersial',
+                'PrivacySection4Item4': 'Mematuhi undang-undang dan peraturan yang berkaitan',
+                'PrivacySection5Title': '5. Hak Pengguna',
+                'PrivacySection5Desc': 'Pengguna mempunyai hak berikut:',
+                'PrivacySection5Item1': 'Melihat semua data yang disimpan',
+                'PrivacySection5Item2': 'Mengubah suai atau memadam data peribadi',
+                'PrivacySection5Item3': 'Mengeksport salinan data',
+                'PrivacyLastUpdated': 'Kali terakhir dikemas kini: 20 Julai 2025',
+                'PrivacyBackupTipsTitle': 'Petua Sandaran & Keselamatan',
+                'PrivacyBackupTipsItem1': 'Tetapkan frasa laluan sandaran yang kukuh dan berbeza daripada kata laluan log masuk anda, sekurang-kurangnya 12 aksara termasuk huruf besar/kecil, nombor dan simbol.',
+                'PrivacyBackupTipsItem2': 'Simpan fail sandaran .pbbak di lokasi yang dipercayai seperti storan awan yang disulitkan atau storan tempatan yang disulitkan, dan elakkan menghantarnya melalui aplikasi sembang atau pemacu awam.',
+                'PrivacyBackupTipsItem3': 'Bersihkan fail sandaran lama yang tidak lagi diperlukan secara berkala untuk mengurangkan risiko kebocoran.',
+                'PrivacyBackupTipsItem4': 'Jika anda mengesyaki mana-mana fail sandaran mungkin terdedah, tukar kata laluan akaun penting secepat mungkin dan jana sandaran baharu.'
+            }
+        };
+
+        const langClass = {
+            'zh-CN': 'fi fi-cn text-xl',
+            'en': 'fi fi-us text-xl',
+            'ms': 'fi fi-my text-xl'
+        };
+
+        function changeLanguage(lang) {
+            const elements = document.querySelectorAll('[data-i18n]');
+            elements.forEach(element => {
+                const key = element.getAttribute('data-i18n');
+                if (translations[lang] && translations[lang][key]) {
+                    element.textContent = translations[lang][key];
+                }
+            });
+
+            if (langClass[lang]) {
+                const desktopIcon = document.querySelector('#desktop-lang-btn span');
+                const mobileIcon = document.querySelector('#mobile-lang-btn span');
+                if (desktopIcon) desktopIcon.className = langClass[lang];
+                if (mobileIcon) mobileIcon.className = langClass[lang];
+            }
+
+            document.title = translations[lang]['page.title'] || document.title;
+
+            const mobileLangMenu = document.getElementById('mobile-lang-menu');
+            if (mobileLangMenu && !mobileLangMenu.classList.contains('hidden')) {
+                mobileLangMenu.classList.add('hidden');
+            }
+
+            const desktopLangMenu = document.getElementById('desktop-lang-menu');
+            if (desktopLangMenu && !desktopLangMenu.classList.contains('hidden')) {
+                desktopLangMenu.classList.add('hidden');
+            }
+        }
+
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 20) {
+                navbar.classList.add('bg-white/90', 'backdrop-blur-md', 'shadow-sm');
+            } else {
+                navbar.classList.remove('bg-white/90', 'backdrop-blur-md', 'shadow-sm');
+            }
+        });
+
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        const mobileLangBtn = document.getElementById('mobile-lang-btn');
+        const mobileLangMenu = document.getElementById('mobile-lang-menu');
+
+        mobileLangBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            mobileLangMenu.classList.toggle('hidden');
+        });
+
+        const desktopLangBtn = document.getElementById('desktop-lang-btn');
+        const desktopLangMenu = document.getElementById('desktop-lang-menu');
+
+        desktopLangBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            desktopLangMenu.classList.toggle('hidden');
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!mobileLangBtn.contains(e.target) && !mobileLangMenu.contains(e.target)) {
+                mobileLangMenu.classList.add('hidden');
+            }
+            if (!desktopLangBtn.contains(e.target) && !desktopLangMenu.contains(e.target)) {
+                desktopLangMenu.classList.add('hidden');
+            }
+        });
+
+        changeLanguage('en');
+    </script>
+</body>
+</html>
+
